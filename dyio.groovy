@@ -1,6 +1,7 @@
 DyIO d=null;// Create a variable to store the device
 //Check if the device already exists in the device Manager
 if(DeviceManager.getSpecificDevice(DyIO.class, "dyio")==null){
+	BowlerStudio.speak("I did not find a device named dyio. Select a port to connect to the device.");
 	//If the device does not exist, prompt for the connection
 	d = new DyIO(ConnectionDialog.promptConnection()); // This is the DyIO to talk to.
 	d.connect(); // Connect to it.
